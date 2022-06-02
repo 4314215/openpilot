@@ -42,11 +42,11 @@ class CarInterface(CarInterfaceBase):
     ret.stoppingControl = True
     ret.vEgoStopping = 1.0
 
-    ret.longitudinalTuning.kpV = [0.1]
+    ret.longitudinalTuning.kpV = [0.0]
     ret.longitudinalTuning.kiV = [0.0]
     ret.stopAccel = 0.0
 
-    ret.longitudinalActuatorDelayUpperBound = 1.0 # s
+    ret.longitudinalActuatorDelayUpperBound = 0.0 # s
 
     ret.lateralTuning.pid.kf = 0.00005
     ret.mass = 3982. * CV.LB_TO_KG + STD_CARGO_KG
@@ -55,7 +55,7 @@ class CarInterface(CarInterfaceBase):
     ret.steerRatio = 16.55  # 13.8 is spec end-to-end
     tire_stiffness_factor = 0.82
     ret.lateralTuning.pid.kiBP, ret.lateralTuning.pid.kpBP = [[8.941, 20.12, 24.59, 29.06, 40.24], [8.941, 20.12, 24.59, 29.06, 40.24]]
-    ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.05, 0.1, 0.3, 0.32, 0.35], [0.001, 0.005, 0.05, 0.07, 0.09]]
+    ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.05, 0.1, 0.2, 0.32, 0.35], [0.001, 0.005, 0.05, 0.07, 0.09]]
     
     ret.centerToFront = ret.wheelbase * 0.4
 
