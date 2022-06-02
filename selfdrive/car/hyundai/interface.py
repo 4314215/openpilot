@@ -42,11 +42,11 @@ class CarInterface(CarInterfaceBase):
     ret.stoppingControl = True
     ret.vEgoStopping = 1.0
 
-    ret.longitudinalTuning.kpV = [0.1]
+    ret.longitudinalTuning.kpV = [0.0] # default 0.1
     ret.longitudinalTuning.kiV = [0.0]
     ret.stopAccel = 0.0
 
-    ret.longitudinalActuatorDelayUpperBound = 1.0 # in s
+    ret.longitudinalActuatorDelayUpperBound = 1.0 # in s default 1.0
 
     ret.lateralTuning.pid.kf = 0.00005
     ret.mass = 3982. * CV.LB_TO_KG + STD_CARGO_KG
