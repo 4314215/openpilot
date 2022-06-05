@@ -46,7 +46,8 @@ class CarInterface(CarInterfaceBase):
     ret.longitudinalTuning.kiV = [0.0]
     ret.stopAccel = 0.0
 
-    ret.longitudinalActuatorDelayUpperBound = 3.0 # in s default 1.0
+    ret.longitudinalActuatorDelayLowerBound = 0.3
+    ret.longitudinalActuatorDelayUpperBound = 0.3 # in s default 1.0
 
     ret.lateralTuning.pid.kf = 0.00005
     ret.mass = 3982. * CV.LB_TO_KG + STD_CARGO_KG
