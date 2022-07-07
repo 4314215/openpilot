@@ -36,7 +36,7 @@ class CarInterface(CarInterfaceBase):
     tire_stiffness_factor = 1.
 
     ret.stoppingControl = True
-    ret.vEgoStopping = 0.1 # default 1.0
+    ret.vEgoStopping = 0.8 # default 1.0
 
     ret.longitudinalTuning.kpV = [0.0]
     ret.longitudinalTuning.kiV = [0.0]
