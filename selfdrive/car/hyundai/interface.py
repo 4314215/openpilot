@@ -33,10 +33,10 @@ class CarInterface(CarInterfaceBase):
     ret.steerActuatorDelay = 0.1  # Default delay
     ret.steerRateCost = 0.5
     ret.steerLimitTimer = 0.4
-    tire_stiffness_factor = 0.8 # Default 1.0
+    tire_stiffness_factor = 1.0
 
     ret.stoppingControl = True
-    ret.vEgoStopping = 1.0
+    ret.vEgoStopping = 0.8 # default 1.0
 
     ret.longitudinalTuning.kpV = [0.0]
     ret.longitudinalTuning.kiV = [0.0]
